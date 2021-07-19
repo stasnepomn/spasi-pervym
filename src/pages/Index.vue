@@ -272,7 +272,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Спаси Первым"
   }
 };
 </script>
