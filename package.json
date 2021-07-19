@@ -1,0 +1,19 @@
+{
+  "name": "spasi",
+  "private": true,
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "vue-fullpage.js": "^0.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
+}
