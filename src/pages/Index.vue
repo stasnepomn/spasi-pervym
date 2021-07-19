@@ -5,17 +5,19 @@
         fixed
         right-0
         left-0
-        bg-blue-900 bg-opacity-90
+        bg-blue-900 bg-opacity-80
         p-5
         shadow-lg
         md:mx-20
         mx-5
         md:mt-5
+        z-20
         mt-3
         rounded-xl
         flex
         justify-between
       "
+      style="backdrop-filter: blur(6px)"
     >
       <div
         class="
@@ -160,7 +162,8 @@
           "Спаси Первым"
         </h2>
         <a
-          href="#"
+          href="https://docs.google.com/forms/d/16FPGNpMRDbkNUFXa8JdbQ1CEDwThWFrtshzJwKNftMY/prefill"
+          target="_blank"
           class="
             px-10
             py-7
@@ -174,13 +177,54 @@
             opacity-80
             hover:opacity-100
             transition
+            z-10
           "
           >Подать заявку</a
         >
       </div>
     </div>
-    <div class="h-screen flex items-center justify-center bg-cover sixth-slide">
-      test
+    <div
+      class="
+        h-screen
+        flex flex-col
+        items-end
+        justify-center
+        bg-cover
+        sixth-slide
+        p-24
+        text-center
+      "
+    >
+      <div style="width: 500px" class="text-center">
+        <img src="../assets/logo.png" class="m-auto" />
+
+        <h2 class="uppercase text-5xl font-bold text-white pt-2">
+          Спаси первым
+        </h2>
+        <h2 class="uppercase text-6xl font-bold text-white pt-10 font-medium">
+          Шесть конкурсных этапов
+        </h2>
+        <a
+          href="/Polozhenie_EMP_2022.docx"
+          target="_blank"
+          class="
+            px-10
+            py-7
+            mt-5
+            rounded-xl
+            block
+            bg-red-500
+            text-white text-3xl
+            uppercase
+            font-bold
+            opacity-80
+            hover:opacity-100
+            transition
+            z-10
+          "
+          >Положение</a
+        >
+      </div>
     </div>
     <div
       class="h-screen flex items-center justify-center bg-cover seventh-slide"
