@@ -450,33 +450,34 @@ body {
 }
 .first-slide {
   background-image: url("../assets/1.jpg");
+  background-position: center;
 }
 .second-slide {
   background-image: url("../assets/2.jpg");
+  background-position: center;
 }
 .third-slide {
   background-image: url("../assets/3.jpg");
+  background-position: center;
 }
 .fourth-slide {
   background-image: url("../assets/4.jpg");
+  background-position: center;
 }
 .fifth-slide {
   background-image: url("../assets/5.jpg");
+  background-position: center;
 }
 .sixth-slide {
   background-image: url("../assets/6.jpg");
+  background-position: center;
 }
 .seventh-slide {
   background-image: url("../assets/7.jpg");
+  background-position: center;
 }
 .eighth-slide {
   background-image: url("../assets/8.jpg");
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
-  opacity: 0;
+  background-position: center;
 }
 </style>
