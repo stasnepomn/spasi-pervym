@@ -1,4 +1,5 @@
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Спаси Первым',
   plugins: [{ use: 'gridsome-plugin-tailwindcss' }],
+  titleTemplate: '%s',
 };

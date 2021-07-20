@@ -227,9 +227,171 @@
       </div>
     </div>
     <div
-      class="h-screen flex items-center justify-center bg-cover seventh-slide"
+      class="
+        h-screen
+        flex flex-col
+        items-center
+        justify-center
+        bg-cover
+        seventh-slide
+        p-24
+      "
     >
-      test
+      <div class="flex flex-row items-center space-x-10">
+        <a
+          class="
+            flex
+            justify-center
+            items-center
+            text-white text-6xl
+            font-bold
+            block
+            p-5
+            hover:bg-black hover:bg-opacity-30
+            transition
+            rounded-lg
+            cursor-pointer
+            h-full
+          "
+          @click="tab = tab > 1 ? tab - 1 : 6"
+        >
+          &larr;
+        </a>
+        <template v-if="tab === 1">
+          <div>
+            <g-image
+              src="../assets/7_1.jpg"
+              height="600"
+              width="500"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="text-white" style="max-width: 500px">
+            <h1 class="text-5xl font-bold">Конкурс "ВИЗИТКА"</h1>
+            <p class="pt-8 text-2xl font-medium">
+              Суть конкурса – раскрытие темы «ПОМОЩИ ДОСТОИН КАЖДЫЙ».<br /><br />
+              Формат раскрытия темы определяется участниками самостоятельно
+              (песня, танец, сценка, видео и т.д.). <br /><br />В конкурсе
+              необходимо отобразить свое видение оказания экстренной медицинской
+              помощи на различных ее этапах.
+            </p>
+          </div>
+        </template>
+        <template v-if="tab === 2">
+          <div>
+            <g-image
+              src="../assets/7_2.jpg"
+              height="600"
+              width="500"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="text-white" style="max-width: 500px">
+            <h1 class="text-5xl font-bold">Конкурс "ТЕОРИЯ"</h1>
+            <p class="pt-8 text-2xl font-medium">
+              В данном конкурсе принимает участие вся команда. Необходимо дать
+              расшифровку и выявить ведущие синдромы на основании результатов 5
+              клинико-диагностических методов исследований: 
+              <ol class='list-decimal list-inside'>
+                <li>ЭКГ</li>
+                <li>Rg-исследование</li>
+                <li>КЩС(КОС)</li>
+                <li>ОАК+ОАМ</li>
+                <li>БХ-анализ крови +
+              коагулограмма</li>
+              </ol>
+            </p>
+          </div>
+        </template>
+        <template v-if="tab === 3">
+          <div>
+            <g-image
+              src="../assets/7_3.jpg"
+              height="600"
+              width="500"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="text-white" style="max-width: 500px">
+            <h1 class="text-5xl font-bold">Конкурс  «Скорая медицинская помощь»</h1>
+            <p class="pt-8 text-2xl font-medium">
+              В данном конкурсе 3 участникам от каждой команды необходимо оказать помощь в составе моделируемой бригады скорой медицинской помощи по одной из предложенных клинических ситуаций.<br/><br/>Оснащение бригады СМП осуществляется согласно регламентирующим приказам МЗ РФ
+            </p>
+          </div>
+        </template>
+        <template v-if="tab === 4">
+          <div>
+            <g-image
+              src="../assets/7_4.jpg"
+              height="600"
+              width="500"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="text-white" style="max-width: 500px">
+            <h1 class="text-5xl font-bold">Конкурс «Локальные алгоритмы спасения»</h1>
+            <p class="pt-8 text-2xl font-medium">
+              Данный конкурс представляет собой несколько последовательных площадок, на которых команде из 5 человек предстоит оказать первую помощь пострадавшим в различных ситуациях на догоспитальном этапе.<br><br>На работу в рамках одной площадки отводится не более 5 минут.
+            </p>
+          </div>
+        </template>
+        <template v-if="tab === 5">
+          <div>
+            <g-image
+              src="../assets/7_5.jpg"
+              height="600"
+              width="500"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="text-white" style="max-width: 500px">
+            <h1 class="text-5xl font-bold">Конкурс  «Экстренная медицинская помощь»</h1>
+            <p class="pt-8 text-2xl font-medium">
+              Четырем участникам от каждой команды необходимо оказать помощь пациенту в условиях стационара. В каждой клинической ситуации будет 1 пациент, в качестве которого будет представлен робот-симулятор.
+            </p>
+          </div>
+        </template>
+        <template v-if="tab === 6">
+          <div>
+            <g-image
+              src="../assets/7_6.png"
+              height="600"
+              width="600"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div class="text-white" style="max-width: 500px">
+            <h1 class="text-5xl font-bold">Конкурс  “Мануальные навыки”</h1>
+            <p class="pt-8 text-2xl font-medium">
+              Участникам необходимо продемонстрировать владение мануальными навыками, применяемыми на различных этапах оказания экстренной медицинской помощи:
+              <ol class='list-decimal list-inside'>
+<li>Выполнение коникотомии;</li>
+<li>Постановка ЦВК по УЗ-контролем;</li>
+<li>Оказание акушерского пособия.</li>
+              </ol>
+            </p>
+          </div>
+        </template>
+        <a
+          class="
+            flex
+            justify-center
+            items-center
+            text-white text-6xl
+            font-bold
+            block
+            p-5
+            hover:bg-black hover:bg-opacity-30
+            transition
+            rounded-lg
+            h-full
+            cursor-pointer
+          "
+          @click="tab = tab === 6 ? 1 : tab + 1"
+        >
+          &rarr;
+        </a>
+      </div>
     </div>
     <div
       class="
@@ -271,6 +433,11 @@
 
 <script>
 export default {
+  data: function() {
+    return {
+      tab: 1
+    };
+  },
   metaInfo: {
     title: "Спаси Первым"
   }
@@ -304,5 +471,12 @@ body {
 }
 .eighth-slide {
   background-image: url("../assets/8.jpg");
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
 }
 </style>
