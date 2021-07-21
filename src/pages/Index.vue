@@ -257,7 +257,8 @@
         >
           &larr;
         </a>
-        <template v-if="tab === 1">
+        <transition name="fade" mode="out-in">
+        <section v-if="tab === 1" class="flex flex-row items-center space-x-10" key="slide1">
           <div>
             <g-image
               src="../assets/7_1.jpg"
@@ -276,8 +277,8 @@
               помощи на различных ее этапах.
             </p>
           </div>
-        </template>
-        <template v-if="tab === 2">
+        </section>
+        <section v-if="tab === 2" class="flex flex-row items-center space-x-10" key="slide2">
           <div>
             <g-image
               src="../assets/7_2.jpg"
@@ -302,8 +303,8 @@
               </ol>
             </p>
           </div>
-        </template>
-        <template v-if="tab === 3">
+        </section>
+        <section v-if="tab === 3" class="flex flex-row items-center space-x-10" key="slide3">
           <div>
             <g-image
               src="../assets/7_3.jpg"
@@ -318,8 +319,8 @@
               В данном конкурсе 3 участникам от каждой команды необходимо оказать помощь в составе моделируемой бригады скорой медицинской помощи по одной из предложенных клинических ситуаций.<br/><br/>Оснащение бригады СМП осуществляется согласно регламентирующим приказам МЗ РФ
             </p>
           </div>
-        </template>
-        <template v-if="tab === 4">
+        </section>
+        <section v-if="tab === 4" class="flex flex-row items-center space-x-10" key="slide4">
           <div>
             <g-image
               src="../assets/7_4.jpg"
@@ -334,8 +335,8 @@
               Данный конкурс представляет собой несколько последовательных площадок, на которых команде из 5 человек предстоит оказать первую помощь пострадавшим в различных ситуациях на догоспитальном этапе.<br><br>На работу в рамках одной площадки отводится не более 5 минут.
             </p>
           </div>
-        </template>
-        <template v-if="tab === 5">
+        </section>
+        <section v-if="tab === 5" class="flex flex-row items-center space-x-10" key="slide5">
           <div>
             <g-image
               src="../assets/7_5.jpg"
@@ -350,8 +351,8 @@
               Четырем участникам от каждой команды необходимо оказать помощь пациенту в условиях стационара. В каждой клинической ситуации будет 1 пациент, в качестве которого будет представлен робот-симулятор.
             </p>
           </div>
-        </template>
-        <template v-if="tab === 6">
+        </section>
+        <section v-if="tab === 6" class="flex flex-row items-center space-x-10" key="slide6">
           <div>
             <g-image
               src="../assets/7_6.png"
@@ -371,7 +372,8 @@
               </ol>
             </p>
           </div>
-        </template>
+        </section>
+        </transition>
         <a
           class="
             flex
@@ -447,6 +449,14 @@ export default {
 <style>
 body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 .first-slide {
   background-image: url("../assets/1.jpg");
